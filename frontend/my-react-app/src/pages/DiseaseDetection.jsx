@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { Leaf } from "lucide-react";
 import "../styles/diseaseDetection.css";
 
@@ -14,7 +15,7 @@ const DiseaseDetection = () => {
       setLoading(true);
       setTimeout(() => {
         setImage(blobURL);
-        setImageBlob(file); // Storing image as Blob
+        setImageBlob(file);
         setLoading(false);
       }, 1500);
     }
@@ -31,13 +32,16 @@ const DiseaseDetection = () => {
       return;
     }
     alert("RAG is processing the report...");
-    // Here, you can send `imageBlob` to an API for report generation
   };
 
   return (
-    <div className="disease-container">
+    <motion.div 
+      className="disease-container"
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <h1 className="title">Disease Detection</h1>
-
       {!image ? (
         <div className="upload-section">
           <label htmlFor="upload" className="upload-label">
@@ -70,7 +74,7 @@ const DiseaseDetection = () => {
           )}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

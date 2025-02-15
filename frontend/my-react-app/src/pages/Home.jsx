@@ -95,26 +95,44 @@ const Home = () => {
       </div>
 
       {/* Team Section */}
+      <div className="outerfooter">
       <div className="team">
-        <h2>Meet Our Experts</h2>
+        <h2>Meet Our Teammates</h2>
         <div className="team-grid">
           <div className="team-member">
-            <img src="../assets/member1.jpg" alt="team" />
+          <i class="fa-solid fa-user"></i>
             <h4>Preetham M R</h4>
             <p>Web Developer</p>
           </div>
           <div className="team-member">
-            <img src="../assets/member1.jpg" alt="team" />
+          <i class="fa-solid fa-user"></i>
             <h4>Shripad G Maradi</h4>
             <p>AIML Developer</p>
           </div>
           <div className="team-member">
-            <img src="../assets/member2.jpg" alt="team" />
+          <i class="fa-solid fa-user"></i>
             <h4>Rohan R Gowda</h4>
             <p>AIML Developer</p>
           </div>
         </div>
       </div>
+
+      <div className="contact">
+        <div className="contactus">
+          <span>Contact Us </span>
+          <span>preethammr.is23@rvce.edu.in</span>
+        <span>shripadgmaradi.cd23@rvce.edu.in</span>
+        <span>rohanrgowda.is23@rvce.edu.in</span>
+
+        </div>
+        <div className="contactmiddle">
+      Middle
+                </div>
+        <div className="contactend">
+          end
+        </div>
+      </div>
+    </div>
     </div>
   );
 };

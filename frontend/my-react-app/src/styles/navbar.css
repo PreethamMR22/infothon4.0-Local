@@ -1,8 +1,9 @@
+/* Navbar Styles */
 .navbar {
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensures it stays above other elements */
-    background-color: #030202ba; 
+    z-index: 1000;
+    background-color: #0302024a;
     color: white;
     padding: 16px;
     display: flex;
@@ -11,57 +12,106 @@
     box-shadow: 0px 4px 6px rgba(51, 51, 51, 0.585);
 }
 
-  
-  .menu-button {
+.menu-button {
     display: block;
     border: none;
     background: none;
     cursor: pointer;
     color: white;
-  }
-  
-  .navbar-title {
+}
+
+.navbar-title {
     font-size: 1.25rem;
     font-weight: 600;
     color: white;
-  }
-  
-  .navbar-links {
+}
+
+.navbar-links {
     display: flex;
     gap: 16px;
-  }
-  
-  .nav-button {
+}
+
+.nav-button {
     background: none;
     border: none;
     color: white;
     cursor: pointer;
     text-decoration: none;
-  }
-  
-  .nav-button:hover {
+}
+
+.nav-button:hover {
     text-decoration: underline;
-  }
-  
-  .middle {
+}
+
+.middle {
     display: flex;
     text-decoration: none;
-    color:white;
+    color: white;
     justify-content: space-between;
     width: 70%;
-  }
-  .middle a {
+}
+
+.middle a {
     text-decoration: none;
-    color:white;
-&:hover {
-    color:rgb(255, 0, 0);
-    transition: 0.5s;
-}  
+    color: white;
+    transition: color 0.5s;
+}
+
+.middle a:hover {
+    color: rgb(255, 0, 0);
 }
 
 .mainBody {
     height: 100vh;
     background: url("./new.png");
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
+}
+
+/* Profile Popup Styles */
+.profile-popup {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: white;
+    color: black;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 200px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.profile-links a, .logout-button {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-links a:hover, .logout-button:hover {
+    background: #eee;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }

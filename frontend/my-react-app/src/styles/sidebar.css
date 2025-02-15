@@ -1,7 +1,7 @@
 .sidebar {
   position: fixed;
   height: 100%;
-  background-color: #4e504f; /* Green-800 */
+  background-color: #292929; /* Green-800 */
   color: white;
   padding: 20px;
   width: 256px; /* w-64 */
@@ -46,7 +46,7 @@
 /* Apply hover effect forcefully */
 .sidebar-menu li a:hover,
 .sidebar-link:hover {
-  background-color: #2F855A !important; /* Green-700 */
+  background-color: #ff340c !important; /* Green-700 */
   color: #E2E8F0 !important; /* Light gray text for contrast */
 }
 

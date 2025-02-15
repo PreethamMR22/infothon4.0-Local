@@ -143,3 +143,16 @@ body {
 .team-member h4 {
   color: #276749;
 }
+.contact {
+  display: flex;
+  justify-content: space-around;
+  height:5rem;
+  background-color:rgb(5, 5, 28);
+}
+.contact
+.contactus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:white;
+}

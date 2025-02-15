@@ -10,6 +10,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       </button>
       <ul className="sidebar-menu">
         {[
+          { to: "/", label: "" },
+          { to: "/disease-detection", label: "" },
+          { to: "/", label: "" },
+          { to: "/disease-detection", label: "" },
+
+
           { to: "/", label: "Home" },
           { to: "/disease-detection", label: "Disease Detection" },
           
