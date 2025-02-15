@@ -1,9 +1,71 @@
-.weather {
-    padding: 20px;
-    background-color: #e6fffa;
-  }
-  
-  .weather h2 {
-    color: #2c7a7b;
-  }
-  
+.weather-container {
+  position:absolute;
+  top:14rem;
+  left:32rem;
+  width: 45rem;
+  max-width: 500px;
+  color:rgb(0, 0, 0);
+  text-shadow:rgba(0, 0, 0, 0.152) 5px 5px 10px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.352);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.weather-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+input {
+ background-color: rgb(255, 255, 255); 
+ border:none;
+ width:15rem;
+ box-shadow: rgba(0, 0, 0, 0.273) 3px 3px 10px;
+ padding-left: 10px;
+ border-radius: 5px;
+ &:hover {
+  width:17rem;
+  background-color: white;
+  transition:0.5s;
+ }
+}
+
+.weather-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.weather-table th,
+.weather-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.weather-table th {
+  background-color: #f3f4f6;
+  font-weight: bold;
+}
+
+.weather-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.loading-text {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}

@@ -4,7 +4,7 @@ import "../styles/sidebar.css"; // Importing the CSS file
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
-    <div className={`sidebar ${isOpen ? "open" : ""}`}>
+    <div className={`sidebar ${isOpen ? "open" : ""}`} id='completeSidebar'>
       <button className="close-button" onClick={toggleSidebar}>
         <X size={24} />
       </button>
@@ -12,7 +12,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         {[
           { to: "/", label: "Home" },
           { to: "/disease-detection", label: "Disease Detection" },
-          { to: "/severity-analysis", label: "Severity Analysis" },
+          
           { to: "/info", label: "Info" },
           { to: "/reports", label: "Reports" },
           { to: "/weather", label: "Weather" },

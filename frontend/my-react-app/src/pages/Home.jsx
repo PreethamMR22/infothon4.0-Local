@@ -1,51 +1,96 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion } from "framer-motion"; // Import Framer Motion
 import "../styles/home.css";
 import { Leaf, CloudRain, Users, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
+  const featuresRef = useRef(null);
+
+  const handleScroll = () => {
+    if (featuresRef.current) {
+      featuresRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="home">
       {/* Hero Section */}
       <div className="hero-section">
         <div className="hero-content">
-          <h1>Bring Growth, Fresh Agriculture</h1>
-          <p>
-            Monotonically revolutionize niche markets for cross-media. 
-            Continually enhance diverse services before efficiency.
-          </p>
-          <button className="cta-button">Discover More</button>
+          {/* Animated Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            Predict the disease and find the cure!
+          </motion.h1>
+
+          {/* Animated Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.3 }}
+          >
+            Leaf Disease detection using Deep Learning Model, find the efficient
+            fertilizer to cure your disease.
+          </motion.p>
+
+          {/* Animated Button */}
+          <motion.button
+            className="cta-button"
+            onClick={handleScroll}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            Discover More
+          </motion.button>
         </div>
       </div>
 
       {/* Features Section */}
-      <div className="features">
-        <h2>We Provide More Fresh Agro Products</h2>
+      <div className="features" ref={featuresRef}>
+        <h2>Disease Prediction</h2>
         <div className="features-grid">
-          <div className="feature-card">
-            <Leaf className="icon green" />
-            <h3>Fresh Vegetables</h3>
-            <p>Organically grown, farm-fresh vegetables.</p>
-          </div>
-          <div className="feature-card">
-            <CloudRain className="icon blue" />
-            <h3>Agriculture Products</h3>
-            <p>High-quality grains and farm produce.</p>
-          </div>
-          <div className="feature-card">
-            <Users className="icon yellow" />
-            <h3>Fresh Fruits</h3>
-            <p>Nutrient-rich, handpicked fresh fruits.</p>
-          </div>
+          <Link to="/disease-detection" style={{ textDecoration: "none", color: "inherit" }}>
+            <div className="feature-card">
+              <Leaf className="icon green" />
+              <h3>Leaf Disease Detection</h3>
+              <p>Deep Learning model is employed to detect the disease.</p>
+            </div>
+          </Link>
+          <Link to="/disease-detection" style={{ textDecoration: "none", color: "inherit" }}>
+            <div className="feature-card">
+              <CloudRain className="icon blue" />
+              <h3>Access Reports from Cloud</h3>
+              <p>Get efficient and lab-quality reports within minutes.</p>
+            </div>
+          </Link>
+          <Link to="/disease-detection" style={{ textDecoration: "none", color: "inherit" }}>
+            <div className="feature-card">
+              <Users className="icon yellow" />
+              <h3>Fertilizer Recommendation</h3>
+              <p>Get fertilizer recommendations using an AI model.</p>
+            </div>
+          </Link>
         </div>
       </div>
 
       {/* Testimonials Section */}
       <div className="testimonials">
-        <h2>What Our Clients Say</h2>
+        <h2>Customer Reviews & Satisfaction</h2>
         <div className="testimonial-card">
           <MessageCircle className="icon orange" />
-          <p>"Best agro services ever! The quality is unmatched."</p>
-          <h4>Rahul Thakkar</h4>
+          <p>
+            "We strive to provide the best service through Disease Prediction,
+            Report Generation, and Fertilizer Recommendation... Drop Your
+            Suggestion here!"
+          </p>
+          <button className="review-button" style={{ padding: "10px" }}>
+            Write a Review
+          </button>
         </div>
       </div>
 
@@ -55,13 +100,18 @@ const Home = () => {
         <div className="team-grid">
           <div className="team-member">
             <img src="../assets/member1.jpg" alt="team" />
-            <h4>Timothy Harper</h4>
-            <p>Agriculture Specialist</p>
+            <h4>Preetham M R</h4>
+            <p>Web Developer</p>
+          </div>
+          <div className="team-member">
+            <img src="../assets/member1.jpg" alt="team" />
+            <h4>Shripad G Maradi</h4>
+            <p>AIML Developer</p>
           </div>
           <div className="team-member">
             <img src="../assets/member2.jpg" alt="team" />
-            <h4>Sarah James</h4>
-            <p>Crop Scientist</p>
+            <h4>Rohan R Gowda</h4>
+            <p>AIML Developer</p>
           </div>
         </div>
       </div>
