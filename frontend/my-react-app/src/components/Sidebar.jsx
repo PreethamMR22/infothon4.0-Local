@@ -5,9 +5,7 @@ import "../styles/sidebar.css"; // Importing the CSS file
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <div className={`sidebar ${isOpen ? "open" : ""}`} id='completeSidebar'>
-      <button className="close-button" onClick={toggleSidebar}>
-        <X size={24} />
-      </button>
+      
       <ul className="sidebar-menu">
         {[
           { to: "/", label: "" },

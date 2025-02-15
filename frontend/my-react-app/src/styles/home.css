@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Grechen+Fuemen&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Grechen+Fuemen&family=Jacquard+12&family=Outfit:wght@100..900&display=swap');
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -40,7 +42,7 @@ body {
 }
 
 .cta-button {
-  background-color: #ef3615f3;
+  background-color: #cd1d06f3;
   padding: 12px 24px;
   border: none;
   color: white;
@@ -145,14 +147,37 @@ body {
 }
 .contact {
   display: flex;
-  justify-content: space-around;
-  height:5rem;
-  background-color:rgb(5, 5, 28);
+  justify-content:space-between;
+  height:8rem;
+  background-color:rgb(7, 5, 28);
 }
-.contact
+
 .contactus {
+  padding-left:20px;
+  padding-top:20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color:white;
+  color:rgba(255, 255, 255, 0.171);
+}
+.contactend {
+  display: flex;
+  flex-direction: column;
+  padding-right:40px;
+  padding-top:20px;
+}
+.contactmiddle {
+  height:100%;
+  width:5rem;
+  display: flex;
+  justify-content: center;
+  
+}
+.contactmiddle span {
+  font-family: "Jacquard 12", serif;
+  font-weight: 400;
+  font-size:3rem;
+  padding-top:10px;
+  margin-left:-9rem;
+  font-style: normal;
 }

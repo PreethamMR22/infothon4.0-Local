@@ -119,17 +119,20 @@ const Home = () => {
 
       <div className="contact">
         <div className="contactus">
-          <span>Contact Us </span>
+          <span> <b>Contact Us </b></span>
           <span>preethammr.is23@rvce.edu.in</span>
         <span>shripadgmaradi.cd23@rvce.edu.in</span>
         <span>rohanrgowda.is23@rvce.edu.in</span>
 
         </div>
         <div className="contactmiddle">
-      Middle
+              <span>Code warriors</span>
                 </div>
         <div className="contactend">
-          end
+          <span> <b>Contact No.</b></span>
+         <span>7899802208</span>
+         <span>7483075132</span>
+          <span>8431792442</span>
         </div>
       </div>
     </div>
